@@ -1,2 +1,8 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>General stats</h1>
+
+<h3> Total products for sale:
+<%= @products.inject(0) { |result, product| result + product.quantity } %>
+</h3>
+<h3> Total product categories:
+<%= @category.count %>
+</h3>
